@@ -1,0 +1,26 @@
+@url = http://localhost:5000
+GET {{url}}/videos
+
+###
+GET {{url}}/videos/5f91fa5ef1476806d8fc0b4e
+
+### Create a video
+POST {{url}}/videos
+Content-Type: application/json
+
+{
+    "url": "https://www.youtube.com/watch?v=4N3N1MlvVc4&ab_channel=orijimi",
+    "title":"Mad world - Gary Jules",
+    "description":"Video musical"
+}
+
+###
+DELETE {{url}}/videos/5f91fa5ef1476806d8fc0b4e
+
+###
+PUT {{url}}/videos/5f91fc2eeb122309187113df
+Content-Type: application/json
+
+{
+    "description":"Cancion de mi infancia"
+}
